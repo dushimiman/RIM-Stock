@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Z1StockLiabrary.StockLiabraryForder
 {
@@ -16,5 +12,9 @@ namespace Z1StockLiabrary.StockLiabraryForder
         public int DestinationRefID { get; set; }
         public string StatusCode { get; set; } = "DRAFT";
         public string? Notes { get; set; }
+        public string? Specification { get; set; }
+
+        // 🔹 Link DELIVERY -> parent ORDER (nullable for orders, requests, etc.)
+        public long? ParentHeaderEntityID { get; set; }
     }
 }

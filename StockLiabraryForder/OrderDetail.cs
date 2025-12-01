@@ -16,5 +16,6 @@ namespace Z1StockLiabrary.StockLiabraryForder
         public decimal UnitPrice { get; set; }              // decimal(18,4)
 
         public string? ProductName { get; set; }            // snapshot (optional)
+        public string? Specification { get; set; }
     }
 }

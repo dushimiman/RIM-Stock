@@ -27,13 +27,14 @@ namespace Z1StockLiabrary.StockLiabraryForder
 
         // Purchase order
         Task<PurchaseOrderDto?> GetPurchaseOrderAsync(long id);
-        Task<bool> MarkPurchaseOrderPrintedAsync(long headerId);   // NEW
+        Task<bool> MarkPurchaseOrderPrintedAsync(long headerId);
 
         // Delivery draft from ORDER
         Task<long> CreateDeliveryDraftAsync(long orderId, int destinationRefId, bool copyPrices = true, DateTime? entityDate = null);
 
-        // NEW: recompute order status from remaining qty
+        // Recompute order status from remaining qty
         Task<bool> RefreshOrderStatusAsync(long orderId);
+
         // REQUEST flows
         Task<StockCheckResultDto> CheckRequestStockAsync(long requestHeaderId);
         Task ApproveRequestAndIssueAsync(long requestHeaderId);
