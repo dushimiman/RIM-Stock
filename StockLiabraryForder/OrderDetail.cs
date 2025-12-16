@@ -17,5 +17,6 @@ namespace Z1StockLiabrary.StockLiabraryForder
 
         public string? ProductName { get; set; }            // snapshot (optional)
         public string? Specification { get; set; }
+
     }
 }

@@ -19,5 +19,6 @@ namespace Z1StockLiabrary.StockLiabraryForder
 
         // Link to parent: REQ_STOCK -> REQ_PURCHASE -> ORDER -> DELIVERY, etc.
         public long? ParentHeaderEntityID { get; set; }
+
     }
 }

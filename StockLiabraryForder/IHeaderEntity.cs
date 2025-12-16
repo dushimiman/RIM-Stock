@@ -28,7 +28,9 @@ namespace Z1StockLiabrary.StockLiabraryForder
         Task<bool> RefreshOrderStatusAsync(long orderId);
 
         Task<StockCheckResultDto> CheckRequestStockAsync(long requestHeaderId);
-        Task ApproveRequestAndIssueAsync(long requestHeaderId);
+        Task<long> ApproveRequestAndIssueAsync(long requestHeaderId);
+
+
 
         // Purchase Request -> ORDER
         Task<long> CreateOrderFromRequestAsync(
@@ -39,5 +41,9 @@ namespace Z1StockLiabrary.StockLiabraryForder
 
         Task<decimal> GetOnHandAsync(int storeRefId, int productId);
         Task ApproveDeliveryAndPostAsync(long deliveryId);
+        Task<StockVerificationResultDto> VerifyStorekeeperAsync(long headerId);
+        Task<bool> StorekeeperFinalizeVerificationAsync(long headerId, List<StockVerificationLine> updatedLines, string reason);
+
     }
+
 }
