@@ -23,4 +23,6 @@ namespace Z1StockLiabrary.StockLiabraryForder
         public decimal UnitPrice { get; set; }
         public string? Specification { get; set; }
     }
+
 }
+

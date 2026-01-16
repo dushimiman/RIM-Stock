@@ -29,7 +29,9 @@ namespace Z1StockLiabrary.StockLiabraryForder
 
         Task<StockCheckResultDto> CheckRequestStockAsync(long requestHeaderId);
         Task<long> ApproveRequestAndIssueAsync(long requestHeaderId);
+        Task<DeliveryNoteDto?> GetDeliveryNoteAsync(long id);
 
+       
 
 
         // Purchase Request -> ORDER
