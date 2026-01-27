@@ -7,6 +7,10 @@ namespace Z1StockLiabrary.StockLiabraryForder
         public int ProductID { get; set; }
         public string ItemCode { get; set; } = "";
         public string ItemName { get; set; } = "";
+
+        // NEW ✅
+        public decimal InitialStock { get; set; }
+
         public decimal QuantityOnHand { get; set; }
 
         // Only filled when requesting ALL stores
@@ -17,6 +21,10 @@ namespace Z1StockLiabrary.StockLiabraryForder
     {
         public int StoreRefID { get; set; }
         public string StoreName { get; set; } = "";
+
+        // NEW ✅
+        public decimal InitialStock { get; set; }
+
         public decimal Qty { get; set; }
     }
 }
